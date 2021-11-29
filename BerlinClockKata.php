@@ -34,4 +34,9 @@ class BerlinClockKata
         }
         return $tabMinutesBloc;
     }
+
+    public function getSimpleHours()
+    {
+        return ["O","O","O","O"];
+    }
 }
