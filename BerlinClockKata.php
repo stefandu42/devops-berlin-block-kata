@@ -48,6 +48,7 @@ class BerlinClockKata
 
     public function getBlocOf5Hours()
     {
+        if($this->hours === 5) return ['R','O','O','O'];
         return ['O','O','O','O'];
     }
 }

@@ -162,5 +162,13 @@ class BerlinClockKataTest extends TestCase
 
     }
 
+    public function testBlocOf5HoursGiven5ShouldReturn5LightsOn(){
+
+        $berlinClock = new BerlinClockKata(05,00,00);
+        $actual = $berlinClock->getBlocOf5Hours();
+        $this->assertEquals(['R','O','O','O'],$actual);
+
+    }
+
 
 }
