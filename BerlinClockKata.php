@@ -20,4 +20,8 @@ class BerlinClockKata
         }
         return $toReturn;
     }
+
+    public function getBlocOf5Minutes(){
+        return ['O','O','O','O','O','O','O','O','O','O','O'];
+    }
 }

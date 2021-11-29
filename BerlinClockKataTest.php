@@ -5,6 +5,9 @@ use PHPUnit\Framework\TestCase;
 
 class BerlinClockKataTest extends TestCase
 {
+
+    // TEST SIMPLE MINUTES
+
     public function testSimpleMinutesGiven0ShouldReturn0LightsOn(){
 
         $berlinClock = new BerlinClockKata(03,00,00);
@@ -58,6 +61,16 @@ class BerlinClockKataTest extends TestCase
         $berlinClock = new BerlinClockKata(03,06,00);
         $actual = $berlinClock->getSimpleMinutes();
         $this->assertEquals(['Y','O','O','O'],$actual);
+
+    }
+
+    // TEST BLOC MINUTES
+
+    public function testBlocOf5MinutesGiven0ShouldReturn0LightsOn(){
+
+        $berlinClock = new BerlinClockKata(03,00,00);
+        $actual = $berlinClock->getBlocOf5Minutes();
+        $this->assertEquals(['O','O','O','O','O','O','O','O','O','O','O'],$actual);
 
     }
 
