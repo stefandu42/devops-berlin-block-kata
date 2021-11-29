@@ -48,10 +48,11 @@ class BerlinClockKata
 
     public function getBlocOf5Hours()
     {
-        if($this->hours === 5) return ['R','O','O','O'];
-        else if($this->hours === 10) return ['R','R','O','O'];
-        else if($this->hours === 15) return ['R','R','R','O'];
-        else if($this->hours === 20) return ['R','R','R','R'];
-        return ['O','O','O','O'];
+        $q = floor($this->hours / 5);
+        $tabHoursBloc = ['O','O','O','O'];
+        for($i=0;$i<$q;$i++){
+            $tabHoursBloc[$i] = 'R';
+        }
+        return $tabHoursBloc;
     }
 }
