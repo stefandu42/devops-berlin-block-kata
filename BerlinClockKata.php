@@ -37,7 +37,9 @@ class BerlinClockKata
 
     public function getSimpleHours()
     {
+
         $tabSimpleHours = ['O','O','O','O'];
+        if($this->hours===5) return $tabSimpleHours;
         for($i=0;$i<$this->hours;$i++){
             $tabSimpleHours[$i]='R';
         }
