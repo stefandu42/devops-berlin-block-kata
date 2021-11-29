@@ -5,11 +5,12 @@ use PHPUnit\Framework\TestCase;
 
 class BerlinClockKataTest extends TestCase
 {
-    public function testSimpleMinutesShouldReturn0LightsOn(){
+    public function testSimpleMinutesGiven0ShouldReturn0LightsOn(){
 
-        $berlinClock = new BerlinClockKata(03,35,00);
+        $berlinClock = new BerlinClockKata(03,00,00);
         $actual = $berlinClock->getSimpleMinutes();
         $this->assertEquals(['O','O','O','O'],$actual);
 
     }
+
 }
