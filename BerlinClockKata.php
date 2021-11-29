@@ -25,6 +25,7 @@ class BerlinClockKata
         if($this->minutes === 5) return ['Y','O','O','O','O','O','O','O','O','O','O'];
         else if($this->minutes === 10) return ['Y','Y','O','O','O','O','O','O','O','O','O'];
         else if($this->minutes === 15) return ['Y','Y','R','O','O','O','O','O','O','O','O'];
+        else if($this->minutes === 20) return ['Y','Y','R','Y','O','O','O','O','O','O','O'];
         return ['O','O','O','O','O','O','O','O','O','O','O'];
     }
 }
