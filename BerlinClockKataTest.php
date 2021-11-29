@@ -209,6 +209,14 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals(['O'],$actual);
 
     }
+    public function testSecondsGiven2ShouldReturn1LightsOn(){
+
+        $berlinClock = new BerlinClockKata(20,00,02);
+        $actual = $berlinClock->getSeconds();
+        $this->assertEquals(['Y'],$actual);
+
+    }
+
 
 
 }

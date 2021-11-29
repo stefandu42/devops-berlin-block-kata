@@ -59,6 +59,7 @@ class BerlinClockKata
     public function getSeconds()
     {
         if($this->seconds===1) return ["O"];
+        if($this->seconds===2) return ["Y"];
         return ["Y"];
     }
 }
