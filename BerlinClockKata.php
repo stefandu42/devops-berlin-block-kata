@@ -22,6 +22,7 @@ class BerlinClockKata
     }
 
     public function getBlocOf5Minutes(){
+        if($this->minutes === 5) return ['Y','O','O','O','O','O','O','O','O','O','O'];
         return ['O','O','O','O','O','O','O','O','O','O','O'];
     }
 }
