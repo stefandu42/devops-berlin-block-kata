@@ -38,6 +38,7 @@ class BerlinClockKata
     public function getSimpleHours()
     {
         if($this->hours===1) return ["R","O","O","O"];
+        if($this->hours===2) return ["R","R","O","O"];
         return ["O","O","O","O"];
     }
 }
