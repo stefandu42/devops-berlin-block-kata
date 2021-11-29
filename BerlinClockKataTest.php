@@ -130,5 +130,13 @@ class BerlinClockKataTest extends TestCase
 
     }
 
+    public function testSimpleHoursGiven3ShouldReturn3LightsOn(){
+
+        $berlinClock = new BerlinClockKata(03,00,00);
+        $actual = $berlinClock->getSimpleHours();
+        $this->assertEquals(['R','R','R','O'],$actual);
+
+    }
+
 
 }

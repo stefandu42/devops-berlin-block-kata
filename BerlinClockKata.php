@@ -39,6 +39,7 @@ class BerlinClockKata
     {
         if($this->hours===1) return ["R","O","O","O"];
         if($this->hours===2) return ["R","R","O","O"];
+        if($this->hours===3) return ["R","R","R","O"];
         return ["O","O","O","O"];
     }
 }
