@@ -13,9 +13,9 @@ class BerlinClockKata
     }
 
     public function getSimpleMinutes(){
-        if($this->minutes===5) return ["O","O","O","O"];
+        $rest = $this->minutes%5;
         $toReturn = ["O","O","O","O"];
-        for($i=0;$i<$this->minutes;$i++){
+        for($i=0;$i<$rest;$i++){
             $toReturn[$i]="Y";
         }
         return $toReturn;

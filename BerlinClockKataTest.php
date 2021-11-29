@@ -53,6 +53,14 @@ class BerlinClockKataTest extends TestCase
 
     }
 
+    public function testSimpleMinutesGiven6ShouldReturn6LightsOn(){
+
+        $berlinClock = new BerlinClockKata(03,06,00);
+        $actual = $berlinClock->getSimpleMinutes();
+        $this->assertEquals(['Y','O','O','O'],$actual);
+
+    }
+
 
 
 }
