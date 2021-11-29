@@ -146,7 +146,7 @@ class BerlinClockKataTest extends TestCase
 
     }
 
-    public function testSimpleHoursGiven5ShouldReturn5LightsOn(){
+    public function testSimpleHoursGiven5ShouldReturn0LightsOn(){
 
         $berlinClock = new BerlinClockKata(05,00,00);
         $actual = $berlinClock->getSimpleHours();
@@ -162,7 +162,7 @@ class BerlinClockKataTest extends TestCase
 
     }
 
-    public function testBlocOf5HoursGiven5ShouldReturn5LightsOn(){
+    public function testBlocOf5HoursGiven5ShouldReturn1LightsOn(){
 
         $berlinClock = new BerlinClockKata(05,00,00);
         $actual = $berlinClock->getBlocOf5Hours();
@@ -170,11 +170,19 @@ class BerlinClockKataTest extends TestCase
 
     }
 
-    public function testBlocOf5HoursGiven10ShouldReturn10LightsOn(){
+    public function testBlocOf5HoursGiven10ShouldReturn2LightsOn(){
 
         $berlinClock = new BerlinClockKata(10,00,00);
         $actual = $berlinClock->getBlocOf5Hours();
         $this->assertEquals(['R','R','O','O'],$actual);
+
+    }
+
+    public function testBlocOf5HoursGiven15ShouldReturn3LightsOn(){
+
+        $berlinClock = new BerlinClockKata(15,00,00);
+        $actual = $berlinClock->getBlocOf5Hours();
+        $this->assertEquals(['R','R','R','O'],$actual);
 
     }
 
