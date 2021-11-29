@@ -45,4 +45,9 @@ class BerlinClockKata
         }
         return $tabSimpleHours;
     }
+
+    public function getBlocOf5Hours()
+    {
+        return ['O','O','O','O'];
+    }
 }
