@@ -51,6 +51,7 @@ class BerlinClockKata
         if($this->hours === 5) return ['R','O','O','O'];
         else if($this->hours === 10) return ['R','R','O','O'];
         else if($this->hours === 15) return ['R','R','R','O'];
+        else if($this->hours === 20) return ['R','R','R','R'];
         return ['O','O','O','O'];
     }
 }
