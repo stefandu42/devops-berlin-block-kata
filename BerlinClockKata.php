@@ -22,10 +22,16 @@ class BerlinClockKata
     }
 
     public function getBlocOf5Minutes(){
-        if($this->minutes === 5) return ['Y','O','O','O','O','O','O','O','O','O','O'];
-        else if($this->minutes === 10) return ['Y','Y','O','O','O','O','O','O','O','O','O'];
-        else if($this->minutes === 15) return ['Y','Y','R','O','O','O','O','O','O','O','O'];
-        else if($this->minutes === 20) return ['Y','Y','R','Y','O','O','O','O','O','O','O'];
-        return ['O','O','O','O','O','O','O','O','O','O','O'];
+        $q = floor($this->minutes / 5);
+        $tabMinutesBloc = ['O','O','O','O','O','O','O','O','O','O','O'];
+        for($i=0;$i<$q;$i++){
+            if(($i+1)%3 != 0) {
+                $tabMinutesBloc[$i] = 'Y';
+            }
+            else{
+                $tabMinutesBloc[$i] = 'R';
+            }
+        }
+        return $tabMinutesBloc;
     }
 }
